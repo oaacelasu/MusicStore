@@ -1,0 +1,50 @@
+﻿@model SearchViewModel
+
+@{
+    ViewData["Title"] = " | Search Results";
+}
+
+<div class="container mt-4">
+    <div class="row mb-3">
+        <div class="col">
+            <h1 class="text-light">@Model.Header</h1>
+        </div>
+        <div class="col text-right">
+            <a asp-action="Index" class="btn btn-secondary">New Search</a>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>Album</th>
+                    <th>Genre</th>
+                    <th>Artists</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var album in Model.Albums) {
+                    <tr>
+                        <td>
+                            <partial name="_AlbumLinkPartial" model="@album" />
+                        </td>
+                        <td class="text-light">@album.Genre.Name</td>
+                        <td>
+                            @foreach (AlbumArtist ba in album.AlbumArtists) {
+                                <div><partial name="_ArtistLinkPartial" model="@ba.Artist" /></div>
+                            }
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                <a asp-action="Edit" asp-route-id="@album.AlbumId" class="btn btn-warning btn-sm">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@album.AlbumId" class="btn btn-danger btn-sm">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

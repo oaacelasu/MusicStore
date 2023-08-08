@@ -1,0 +1,177 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\DataLayer\Repositories\" />
+    <Folder Include="Models\DTOs\" />
+    <Folder Include="Models\Grid\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Artist\" />
+    <Folder Include="Views\Album\" />
+    <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Shared\Components\CartBadge\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="Stripe.net" Version="41.27.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\.DS_Store" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\.gitignore" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\composer.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.classless.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.classless.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.classless.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.classless.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.fluid.classless.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.fluid.classless.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.fluid.classless.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.fluid.classless.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.slim.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.slim.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.slim.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\pico.slim.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\postcss.config.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\themes\default.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\themes\default.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\themes\default.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\css\themes\default.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\.DS_Store" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\accordions.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\buttons.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\cards.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\classless.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\containers.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\css\pico.docs.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\css\pico.docs.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\css\pico.docs.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\css\pico.docs.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\customization.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\dropdowns.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\forms.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\grid.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\index.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\commons.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\commons.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\customization.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\customization.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\grid.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\grid.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\modal.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\modal.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\src\color-picker.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\src\material-design-colors.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\src\theme-switcher.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\js\src\toggle-navigation.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\loading.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\modal.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\navs.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\progress.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\rtl.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scroller.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\components\_modal.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\components\_nav.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\components\_theme-switcher.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\content\_code.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\content\_typography.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\layout\_aside.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\layout\_document.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\layout\_documentation.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\layout\_main.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\pico.docs.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\themes\docs\_dark.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\themes\docs\_icons.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\themes\docs\_light.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\scss\themes\_docs.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\accordions.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\buttons.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\cards.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\classless.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\containers.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\customization.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\dropdowns.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\forms.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\grid.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\index.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\loading.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\modal.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\navs.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\progress.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\rtl.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\scroller.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\tables.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\themes.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\tooltips.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\typography.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\we-love-classes.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\_footer.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\_head.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\_nav.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\src\_sidebar.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\tables.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\themes.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\tooltips.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\typography.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\docs\we-love-classes.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\LICENSE.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\package-lock.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\package.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\README.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\.DS_Store" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\components\_accordion.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\components\_card.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\components\_dropdown.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\components\_modal.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\components\_nav.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\components\_progress.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\content\_button.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\content\_code.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\content\_embedded.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\content\_form-alt-input-types.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\content\_form-checkbox-radio.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\content\_form.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\content\_miscs.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\content\_table.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\content\_typography.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\layout\_container.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\layout\_document.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\layout\_grid.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\layout\_scroller.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\layout\_section.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\layout\_sectioning.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\pico.classless.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\pico.fluid.classless.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\pico.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\pico.slim.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\postcss.config.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\themes\default.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\themes\default\_colors.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\themes\default\_dark.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\themes\default\_light.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\themes\default\_styles.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\utilities\_accessibility.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\utilities\_loading.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\utilities\_reduce-motion.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\utilities\_tooltip.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\_functions.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\lib\pico-1.5.10\scss\_variables.scss" />
+  </ItemGroup>
+
+</Project>

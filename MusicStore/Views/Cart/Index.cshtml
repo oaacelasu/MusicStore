@@ -1,0 +1,99 @@
+﻿@model CartViewModel
+
+@{
+    ViewData["Title"] = " | Cart";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4 text-light">Your Cart</h1>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <form asp-action="Remove" method="post">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Artist(s)</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (CartItem item in Model.List)
+                    {
+                        <tr>
+                            <td class="align-middle">
+                                <img src="@item.Album.Image" alt="@item.Album.Title" class="img-fluid rounded album-image square-image">
+                            </td>
+                            <td>
+                                <a asp-action="Details" asp-controller="Album"
+                                   asp-route-id="@item.Album.AlbumId"
+                                   asp-route-slug="@item.Album.Title.Slug()"
+                                   class="text-light">
+                                    @item.Album.Title
+                                </a>
+                            </td>
+                            <td>
+                                @foreach (var keyValuePair in item.Album.Artists)
+                                {
+                                    <p>
+                                        <a asp-action="Details" asp-controller="Artist"
+                                           asp-route-id="@keyValuePair.Key"
+                                           asp-route-slug="@keyValuePair.Value.Slug()"
+                                           class="text-light">
+
+                                            @keyValuePair.Value
+                                        </a>
+                                    </p>
+                                }
+                            </td>
+                            <td class="text-light">@item.Quantity</td>
+                            <td class="text-light">@item.SubTotal.ToString("c")</td>
+                            <td>
+                                <div class="float-right">
+                                    <a asp-action="Edit" asp-controller="Cart"
+                                       asp-route-id="@item.Album.AlbumId"
+                                       asp-route-slug="@item.Album.Title.Slug()"
+                                       my-button>
+                                        Edit
+                                    </a>
+                                    <button type="submit" name="id" value="@item.Album.AlbumId"
+                                            class="btn btn-danger btn-sm mt-2">
+                                        Remove
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+                    </tbody>
+                </table>
+            </form>
+        </div>
+
+        <div class="col-lg-4">
+            <aside class="bg-light p-3">
+                <h4>Order Summary</h4>
+                <hr>
+                <p>Subtotal: @Model.SubTotal.ToString("c")</p>
+                <!-- Additional pricing information -->
+            </aside>
+
+            <div class="text-center mt-4">
+                <a asp-action="Checkout" my-button class="btn btn-warning">Checkout</a>
+                <button type="submit" form="clear-form" class="btn btn-danger">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="float-left mt-3">
+        <a asp-action="List" asp-controller="Album" asp-all-route-data="@Model.AlbumGridRoute" class="btn btn-dark">Back to Shopping</a>
+    </div>
+</div>
+
+<form id="clear-form" asp-action="Clear" method="post">
+    <input type="hidden" name="returnUrl" value="@Context.Request.Path">
+</form>

@@ -1,0 +1,109 @@
+﻿@model  AlbumViewModel
+
+@{
+    // this view is used for add, edit, and delete. 
+    // Which one is determined by the action method name.
+    var action = ViewContext.RouteData.Values["action"].ToString().Capitalize();
+
+    ViewData["Title"] = $" | {action} Album";
+}
+
+<div class="container mt-4">
+    <h1 class="text-light">@action Album</h1>
+
+    <form asp-action="@action" asp-area="Admin" method="post">
+
+        <input type="hidden" asp-for="Album.AlbumId"/>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <label class="text-light">Title:</label>
+            </div>
+
+            @* if deleting, display title in a label and put value in hidden field
+           for delete message. Otherwise, provide a text box*@
+            @if (Operation.IsDelete(action))
+            {
+                <div class="col-sm-4">
+                    <label>@Model.Album.Title</label>
+                </div>
+                <input type="hidden" asp-for="Album.Title"/>
+            }
+            else
+            {
+                <div class="col-sm-4">
+                    <input asp-for="Album.Title" class="form-control"/>
+                </div>
+                <div class="col-sm-6">
+                    <span asp-validation-for="Album.Title" class="text-danger"></span>
+                </div>
+            }
+        </div>
+
+        @* if not deleting, display text boxes and drop-downs for rest of fields*@
+        @if (!Operation.IsDelete(action))
+        {
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    <label class="text-light">Price:</label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Album.Price" class="form-control"/>
+                </div>
+                <div class="col-sm-6">
+                    <span asp-validation-for="Album.Price" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    <label class="text-light">Genre:</label>
+                </div>
+                <div class="col-sm-4">
+                    <select asp-for="Album.GenreId" class="form-control"
+                            asp-items='@new SelectList(Model.Genres, "GenreId", "Name", Model.Album.GenreId)'>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <span asp-validation-for="Album.GenreId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    <label class="text-light">Release Date:</label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Album.ReleaseDate" class="form-control"  type="date"/>
+                </div>
+                <div class="col-sm-6">
+                    <span asp-validation-for="Album.ReleaseDate" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    <label class="text-light">Artist(s):</label><br/>
+                </div>
+                <div class="col-sm-4 text-light">
+                    <select asp-for="SelectedArtists" class="form-control"
+                            asp-items='@new MultiSelectList(Model.Artists, "ArtistId", "FullName", Model.SelectedArtists)'>
+                    </select>
+                    (Hold down CTRL or CMD key to select multiple)
+                </div>
+                <div class="col-sm-6">
+                    <span asp-validation-for="SelectedArtists" class="text-danger"></span>
+                </div>
+            </div>
+        }
+        <div class="row">
+            <div class="col-sm-4 offset-sm-2">
+                <button type="submit" class="btn btn-warning">@action</button>
+
+                @* return user to main admin page after add, or to search page otherwise *@
+                <a asp-action="@(Operation.IsAdd(action) ? "Index" : "Search")"
+                   my-button>
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </form>
+</div>

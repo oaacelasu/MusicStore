@@ -1,0 +1,7 @@
+﻿@model Album
+<a asp-action="Details" asp-controller="Album" asp-area="" 
+    asp-route-id="@Model.AlbumId"
+    asp-route-slug="@Model.Title.Slug()"
+    class="white-link">
+    @Model.Title
+</a>

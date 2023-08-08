@@ -1,0 +1,40 @@
+﻿@model SearchViewModel
+
+@{
+    ViewData["Title"] = " | Manage Albums";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4 text-light">Manage Albums</h1>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h5 class="mt-1"><a asp-action="Add" class="btn btn-warning">Add an Album</a></h5>
+        </li>
+        <li class="list-group-item">
+            <form asp-action="Search" method="post" class="form-inline">
+                <h5 class="mt-1 mr-3">Find an Album</h5>
+                <div class="form-group mb-2">
+                    <label for="searchTerm" class="mr-2">Search Term:</label>
+                    <input id="searchTerm" asp-for="SearchTerm" class="form-control">
+                    <span asp-validation-for="SearchTerm" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="mr-2">Search By:</label>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" asp-for="Type" value="album" class="form-check-input" checked>
+                        <label class="form-check-label">Title</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" asp-for="Type" value="artist" class="form-check-input">
+                        <label class="form-check-label">Artist</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" asp-for="Type" value="genre" class="form-check-input">
+                        <label class="form-check-label">Genre</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary ml-2">Find</button>
+            </form>
+        </li>
+    </ul>
+</div>

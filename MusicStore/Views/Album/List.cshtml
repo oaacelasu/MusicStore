@@ -1,0 +1,84 @@
+﻿@model GridViewModel<Album>
+
+@{
+    ViewData["Title"] = " | Album Catalog";
+}
+
+<h1 class="text-center text-light">Album Catalog</h1>
+
+<div class="container mt-4">
+    <form asp-action="Filter" method="post" class="form-inline">
+        
+        <label class="text-light">Artist: </label>
+        <vc:artist-drop-down selected-value="@Model.CurrentRoute.ArtistFilter">
+        </vc:artist-drop-down>
+        <label class="text-light">Genre: </label>
+        <vc:genre-drop-down selected-value="@Model.CurrentRoute.GenreFilter">
+        </vc:genre-drop-down>
+
+        <label class="text-light">Price: </label>
+        <vc:price-drop-down selected-value="@Model.CurrentRoute.PriceFilter">
+        </vc:price-drop-down>
+
+        <button type="submit" class="mr-2 btn-warning">Filter</button>
+        <button type="submit" name="clear" value="true" class="btn-dark">Clear</button>
+    </form>
+
+    <form asp-action="Add" asp-controller="Cart" method="post">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Image</th>
+                    <th>
+                        <my-sorting-link sort-field="@nameof(Album.Title)" current="@Model.CurrentRoute">Title</my-sorting-link>
+                    </th>
+                    <th>Artist(s)</th>
+                    <th>
+                        <my-sorting-link sort-field="@nameof(Genre)" current="@Model.CurrentRoute">Genre</my-sorting-link>
+                    </th>
+                    <th>
+                        <my-sorting-link sort-field="@nameof(Album.Price)" current="@Model.CurrentRoute">Price</my-sorting-link>
+                    </th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (Album album in Model.Items)
+                {
+                    <tr>
+                        <td class="align-middle">
+                            <img src="@album.Image" alt="@album.Title" class="img-fluid rounded album-image square-image">
+                        </td>
+                        <td class="align-middle">
+                            <partial name="_AlbumLinkPartial" model="@album"/>
+                        </td>
+                        <td class="align-middle">
+                            @foreach (var ba in album.AlbumArtists)
+                            {
+                                <p class="m-0">
+                                    <partial name="_ArtistLinkPartial" model="@ba.Artist"/>
+                                </p>
+                            }
+                        </td>
+                        <td class="align-middle text-light">@album.Genre?.Name</td>
+                        <td class="align-middle text-light">@album.Price.ToString("c")</td>
+                        <td class="align-middle ">
+                            <button type="submit" name="id" value="@album.AlbumId" class="btn btn-warning btn-sm">
+                                Add To Cart
+                            </button>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </form>
+
+    <div class="d-flex justify-content-center">
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <my-paging-link number="@i" current="@Model.CurrentRoute"/>
+        }
+    </div>
+</div>

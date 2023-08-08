@@ -1,0 +1,37 @@
+﻿@model Artist
+
+@{
+    ViewData["Title"] = $" | {Model.FullName}";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4 text-light">@Model.FullName</h1>
+
+                <div class="row justify-content-center">
+
+                    @foreach (var ba in Model.AlbumArtists)
+                    {
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <a href="@Url.Action("Details", "Album", new { id = ba.Album.AlbumId, slug = ba.Album.Title.Slug() })">
+                                    <img src="@ba.Album.Image" class="card-img-top" alt="@ba.Album.Title">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title text-light">@ba.Album.Title</h5>
+                                    <p class="card-text text-light">@ba.Album.Genre?.Name</p>
+                                    <p class="card-text text-light">@ba.Album.ReleaseDate.ToString("d")</p>
+                                    <h2 class="card-subtitle">@ba.Album.Price.ToString("c")</h2>
+                                    <a href="@Url.Action("Details", "Album", new { id = ba.Album.AlbumId, slug = ba.Album.Title.Slug() })" class="btn btn-warning">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+﻿@model Artist
+
+<a asp-action="Details"  asp-controller="Artist" asp-area=""
+    asp-route-id="@Model.ArtistId"
+    asp-route-slug="@Model.FullName.Slug()"
+    class="white-link">
+    @Model.FullName
+</a>

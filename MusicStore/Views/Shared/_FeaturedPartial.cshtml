@@ -1,0 +1,20 @@
+﻿@model List<Album>
+
+<div class="row justify-content-center">
+    @foreach (var album in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <a href="@Url.Action("Details", "Album", new { id = album.AlbumId, slug = album.Title.Slug() })">
+                    <img src="@album.Image" class="card-img-top" alt="@album.Title">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">@album.Title</h5>
+                    <p class="card-text">@album.Genre?.Name</p>
+                                                        <h2 class="card-subtitle">@album.Price.ToString("c")</h2>
+                    <a href="@Url.Action("Details", "Album", new { id = album.AlbumId, slug = album.Title.Slug() })" class="btn btn-warning">View Details</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

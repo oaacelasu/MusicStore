@@ -1,0 +1,137 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MusicStore
+build_property.RootNamespace = MusicStore
+build_property.ProjectDir = /Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/Album/Album.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWxidW0vQWxidW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/Album/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWxidW0vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/Album/SearchResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWxidW0vU2VhcmNoUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/Artist/Artist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aXN0L0FydGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/Artist/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aXN0L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/Genre/Genre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvR2VucmUvR2VucmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/Genre/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvR2VucmUvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2hhcmVkL19BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Album/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWxidW0vRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Album/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWxidW0vTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Artist/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJ0aXN0L0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Artist/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJ0aXN0L0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Cart/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9DaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Cart/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Shared/Components/CartBadge/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvQ2FydEJhZGdlL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Shared/Components/Common/DropDown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvQ29tbW9uL0Ryb3BEb3duLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Shared/_AlbumLinkPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BbGJ1bUxpbmtQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Shared/_ArtistLinkPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BcnRpc3RMaW5rUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Shared/_FeaturedPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19GZWF0dXJlZFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Shared/_NavbarMenuButtonPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19OYXZiYXJNZW51QnV0dG9uUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Shared/_PagingLinksPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19QYWdpbmdMaW5rc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/oaacelasu/Development/Conestoga/Term4/net/Final_Project/MusicStore/MusicStore/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

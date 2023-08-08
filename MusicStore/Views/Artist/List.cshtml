@@ -1,0 +1,45 @@
+﻿@model GridViewModel<Artist>
+@{
+    ViewData["Title"] = " | Artist Catalog";
+}
+
+<h1 class="text-center text-light">Artist Catalog</h1>
+
+<div class="container mt-4">
+
+<table class="table table-sm">
+    <thead class="thead-dark">
+    <tr>
+        <th>
+            <my-sorting-link sort-field="@nameof(Artist.FullName)"
+                             current="@Model.CurrentRoute">Full Name</my-sorting-link>
+        </th>
+        <th>Album(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (Artist artist in Model.Items) {
+        <tr>
+            @* don't use artist link partial views here bc need to have different inner html (first or last name) *@
+            <td>
+                <a asp-action="Details" asp-route-id="@artist.ArtistId"
+                   asp-route-slug="@artist.FullName.Slug()"
+                   class="white-link">
+                    @artist.FullName
+                </a>
+            </td>
+            <td>
+                @foreach (var ba in artist.AlbumArtists) {
+                    <p>
+                        <partial name="_AlbumLinkPartial" model="@ba.Album" />
+                    </p>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+<partial name="_PagingLinksPartial" />
+</div>

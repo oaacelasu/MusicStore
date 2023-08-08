@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Checkout";
+}
+
+<body>
+<div class="container mt-4">
+    <h1 class="mb-4 text-light">Checkout</h1>
+
+    <!-- Display a payment form -->
+    <form id="payment-form" class="mt-4">
+        <div id="link-authentication-element" class="mb-3">
+            <!--Stripe.js injects the Link Authentication Element-->
+        </div>
+        <div id="payment-element" class="mb-3">
+            <!--Stripe.js injects the Payment Element-->
+        </div>
+        <button id="submit" class="btn btn-primary">
+            <div class="spinner hidden" id="spinner"></div>
+            <span id="button-text">Pay now</span>
+        </button>
+        <div id="payment-message" class="mt-2 hidden"></div>
+    </form>
+</div>
+
+</body>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="~/js/checkout.js" defer></script>

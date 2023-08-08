@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Genre>
+
+@{
+    ViewData["Title"] = " | Manage Genres";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4 text-light">Manage Genres</h1>
+
+    <h5 class="mt-3">
+        <a asp-action="Add" asp-area="Admin" class="btn btn-primary">Add a Genre</a>
+    </h5>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-dark table-sm">
+            <thead>
+                <tr>
+                    <th>GenreId</th>
+                    <th>Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Genre genre in Model)
+                {
+                    <tr>
+                        <td>@genre.GenreId</td>
+                        <td>@genre.Name</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a asp-action="ViewAlbums" asp-area="Admin" asp-route-id="@genre.GenreId" class="btn btn-info btn-sm mr-2">View Albums</a>
+                                <a asp-action="Edit" asp-area="Admin" asp-route-id="@genre.GenreId" class="btn btn-warning btn-sm  mr-2">Edit</a>
+                                <a asp-action="Delete" asp-area="Admin" asp-route-id="@genre.GenreId" class="btn btn-danger btn-sm">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
