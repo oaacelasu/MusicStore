@@ -17,7 +17,7 @@ namespace MusicStore.TagHelpers
             var td = ViewCtx.TempData;
             if (td.ContainsKey("message"))
             {
-                output.BuildTag("h4", "bg-warning text-center p-5");
+                output.BuildTag("div", "bg-warning text-center p-3 rounded shadow-sm"); // Add "fade-in" class here
                 
                 output.Content.SetContent(td["message"].ToString());
             } 

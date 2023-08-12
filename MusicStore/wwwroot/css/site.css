@@ -99,3 +99,24 @@ html, body {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.bg-warning {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}

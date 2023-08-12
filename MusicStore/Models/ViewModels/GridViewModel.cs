@@ -7,5 +7,6 @@ namespace MusicStore.Models
         public IEnumerable<T> Items { get; set; }
         public RouteDictionary CurrentRoute { get; set; }
         public int TotalPages { get; set; }
+        public int TotalRecords { get; set; }
     }
 }

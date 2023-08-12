@@ -7,17 +7,24 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 }
 
-<ul class="nav nav-tabs mt-2 mb-3">
-    <li class="nav-item">
-        <a class="nav-link" asp-action="Index" asp-controller="Album" asp-area="Admin">Manage Albums</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" asp-action="Index" asp-controller="Artist" asp-area="Admin">Manage Artists</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" asp-action="Index" asp-controller="Genre" asp-area="Admin">Manage Genres</a>
-    </li>
-</ul>
+<div class="row">
+    <nav class="col-md-2 d-none d-md-block sidebar">
+        <div class="position-sticky">
+            <ul class="nav flex-column mt-3">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index" asp-controller="Album" asp-area="Admin">Manage Albums</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index" asp-controller="Artist" asp-area="Admin">Manage Artists</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index" asp-controller="Genre" asp-area="Admin">Manage Genres</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-@RenderBody()
-
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        @RenderBody()
+    </main>
+</div>

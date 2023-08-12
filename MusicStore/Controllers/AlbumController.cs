@@ -26,7 +26,8 @@ namespace MusicStore.Controllers
             var vm = new GridViewModel<Album> {
                 Items = data.List(options),
                 CurrentRoute = builder.CurrentRoute,
-                TotalPages = builder.GetTotalPages(data.Count)
+                TotalPages = builder.GetTotalPages(data.Count),
+                TotalRecords = data.Count
             };
 
             return View(vm);

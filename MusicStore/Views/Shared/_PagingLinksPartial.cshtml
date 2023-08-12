@@ -1,6 +1,7 @@
 ﻿@{
-    for (int i = 1; i <= Model.TotalPages; i++)
-    {
-        <my-paging-link number="@i" current="@Model.CurrentRoute" />
-    }
+    <div class="d-flex justify-content-center">
+        <my-paging-link current="@Model.CurrentRoute" pages="@Model.TotalPages" type="previous"/>
+        <my-paging-link current="@Model.CurrentRoute" pages="@Model.TotalPages" type="page"/>
+        <my-paging-link current="@Model.CurrentRoute" pages="@Model.TotalPages" type="next"/>
+    </div>
 }

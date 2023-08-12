@@ -6,10 +6,7 @@
     <title>Music Store @ViewBag.Title</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
 
-    <link rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-          crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4755447fee.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="~/css/site.css"/>
 </head>
 <body>
@@ -23,17 +20,17 @@
                     @*nav item links for Home, Albums, and Artists*@
                     <li class="nav-item">
                         <a class="nav-link" asp-action="Index" asp-controller="Home" asp-area="">
-                            <span class="fas fa-home"></span>&nbsp;Home
+                            <span class="fa-brands fa-microblog"></span>&nbsp;Featured
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-action="List" asp-controller="Album" asp-area="">
-                            <span class="fas fa-album-open"></span>&nbsp;Albums
+                            <span class="fas fa-music"></span>&nbsp;Top Albums
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-action="List" asp-controller="Artist" asp-area="">
-                            <span class="fas fa-feather-alt"></span>&nbsp;Artists
+                            <span class="fa-solid fa-microphone-lines"></span>&nbsp;Artists
                         </a>
                     </li>
                 </ul>
